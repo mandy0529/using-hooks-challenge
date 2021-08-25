@@ -1,4 +1,19 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
+  text-align: left;
+  margin:50px;
+  font-size: 20px;
+  height:1000vh;
+}
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  color:teal;
+}
+.h1 {
+  border-top: 3px dotted grey;
+  padding:20px 0;
+}
+.btn {
+  all:unset;
 }
