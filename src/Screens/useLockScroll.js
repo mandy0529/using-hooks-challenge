@@ -1,14 +1,19 @@
-import {useEffect, useState} from 'react';
-
-const UseForLockScroll = () => {};
+import {useState} from 'react';
+import useScrollLock from 'use-scroll-lock';
 
 const UseLockScroll = () => {
+  const [enabled, setEnabled] = useState(false);
+  useScrollLock(enabled);
+
   return (
-    <>
-      <h1 class="h1">8. use lock scroll</h1>
-      <button>unlock</button>
-      <button>lock</button>
-    </>
+    <div>
+      <h1>8. use scroll lock</h1>
+      <p>is locked now?</p>
+      <p>{enabled ? 'yes' : 'no'}</p>
+      <button onClick={() => setEnabled(!enabled)}>
+        {enabled ? 'unlock' : 'lock'}
+      </button>
+    </div>
   );
 };
 
